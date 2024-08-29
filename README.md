@@ -36,7 +36,7 @@ Este projeto é uma API desenvolvida em C# utilizando o ASP.NET Core Web API, qu
    - Use o seguinte comando para iniciar um contêiner com o SQL Server:
 
      ```bash
-     docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=SuaSenha@123' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+     docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=SuaSenha@123' -p 1433:1433 --name sql_server --hostname sql_server -d mcr.microsoft.com/mssql/server:2022-latest
      ```
 
 3. **Configure a conexão com o banco de dados:**
@@ -59,7 +59,7 @@ Este projeto é uma API desenvolvida em C# utilizando o ASP.NET Core Web API, qu
 
 5. **Use a API:**
 
-   - A API estará disponível em `https://localhost:7070/swagger/index.html` ou `https://localhost:7071/swagger/index.html`.
+   - A API estará disponível em `http://localhost:5000` ou `http://localhost:5001`.
 
 ## Endpoints da API
 
